@@ -1,0 +1,8 @@
+stepDefinitions/PositiveAndNegativeLogin.class
+parallel/demoqaPositiveForm.class
+pageFactory/loginPageFactory.class
+stepDefinitions/demoqaPositiveForm.class
+pageObject/loginPage.class
+pageObject/POMPositiveAndNegativeLogin.class
+parallel/PositiveAndNegativeLogin.class
+pageFactory/POFlogin.class
