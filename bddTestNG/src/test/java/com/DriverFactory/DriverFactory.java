@@ -27,7 +27,7 @@ public class DriverFactory {
     }
 
     public static WebDriver getDriver() {
-        return driver;											// tryss
+        return driver;											// tryssfew
     }
 
     public static void quitDriver() {
