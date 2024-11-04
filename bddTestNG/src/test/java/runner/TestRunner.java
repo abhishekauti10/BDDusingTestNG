@@ -8,8 +8,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		
-		features = {"/Users/abhishekauti/eclipse-workspace/bddTestNG/src/test/resources/feature"}		// Path for feature files or give package name
-		,glue= {"stepDefinitions"}			// Path for step definition, hooks files or package name
+		features = {"/Users/abhishekauti/git/BDDusingTestNG/bddTestNG/src/test/resources/feature/login.feature"}		// Path for feature files or give package name
+		,glue= {"pageObject"}			// Path for step definition, hooks files or package name
 		//,stepNotifications = true			// Shows test cases in result heirarchy
 		,plugin = {//"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",		//extend report
 				"pretty",

@@ -1,18 +1,15 @@
-<!-- <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Parallel Cross-Browser Test Suite" parallel="tests" thread-count="3">
-
-    <test name="Chrome Tests">
-        <parameter name="browser" value="chrome"/>
-        <classes>
-            <class name="runner.TestRunner"/>
-        </classes>
-    </test>
-
-    <test name="Firefox Tests">
-        <parameter name="browser" value="safari"/>
-        <classes>
-            <class name="runner.TestRunner"/>
-        </classes>
-    </test>
-
-</suite> -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="CrossBrowserSuite" parallel="tests" thread-count="5">
+	<test name="ChromeTests">
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="parallel.ParallelRunner" />
+		</classes>
+	</test>
+	<test name="FirefoxTests">
+		<parameter name="browser" value="safari" />
+		<classes>
+			<class name="parallel.ParallelRunner" />
+		</classes>
+	</test>
+</suite>

@@ -5,9 +5,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class loginPageFactory {
+public class LoginPageFactory {
 	
 	WebDriver driver;
+	
+	//CONSTRUCTOR
+	public LoginPageFactory(WebDriver driver) {
+		this.driver= driver;
+		
+		// Initialize elements using PageFactory
+		PageFactory.initElements(driver, this);
+		
+	}
 	
 	@FindBy(name = "username")
 	WebElement txt_username;
@@ -30,12 +39,7 @@ public class loginPageFactory {
 		btn_login.click();
 	}
 	
-	public loginPageFactory(WebDriver driver) {
-		this.driver= driver;
-		
-		PageFactory.initElements(driver, this);
-		
-	}
+	
 	
 	
 

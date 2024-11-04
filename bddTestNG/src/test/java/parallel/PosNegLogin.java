@@ -1,29 +1,27 @@
 package parallel;
 
 import org.openqa.selenium.By;
-//import org.openqa.selenium.OutputType;
-//import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 
-//import io.cucumber.java.AfterStep;
-//import io.cucumber.java.Scenario;
+import MyHooks.Hook;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
-public class PositiveAndNegativeLogin {
+public class PosNegLogin {
 	
 	WebDriver driver = new ChromeDriver();
 	
 	@Given("^user is on the the internet page$")
 	public void user_is_on_the_the_internet_page(){
-		
-		
+
+		//Hook.getScenarioTest().info("Navigating to the login page");
 		driver.get("https://the-internet.herokuapp.com/login");
 		
 	}
@@ -141,13 +139,13 @@ public class PositiveAndNegativeLogin {
 	
 //	@AfterStep
 //	public void addScreenshot(Scenario scenario) {
-//		//if(scenario.isFailed()) {
+//		if(scenario.isFailed()) {
 //		
 //			final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
 //		    scenario.attach(screenshot, "image/png", scenario.getName());
 //		    
 //		    
-//		//}
+//		}
 //		
 //	}
 	

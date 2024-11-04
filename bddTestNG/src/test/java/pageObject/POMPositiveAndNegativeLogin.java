@@ -14,8 +14,8 @@ import io.cucumber.java.en.When;
 public class POMPositiveAndNegativeLogin {
 
 
-	loginPage login;
 	WebDriver driver = new ChromeDriver();
+	LoginPage login = new LoginPage(driver);
 
 	@Given("^user is on the the internet page$")
 	public void user_is_on_the_the_internet_page(){
@@ -40,7 +40,7 @@ public class POMPositiveAndNegativeLogin {
 	public void user_enters_username_and_password(String username,String password){
 		
 		
-		login.enterPassword(password);
+		login.enterUsername(username);
 		login.enterPassword(password);
 
 	}
@@ -73,7 +73,7 @@ public class POMPositiveAndNegativeLogin {
 
 	@When("^user enters correct (.*) but (.*)")
 	public void user_enters_correct_username_but_password(String username,String password) {
-		login.enterPassword(password);
+		login.enterUsername(username);
 		login.enterPassword(password);
 	}
 
@@ -106,7 +106,7 @@ public class POMPositiveAndNegativeLogin {
 	@When("^user enters wrong (.*) and (.*)")
 	public void user_enters_wrong_username_and_password(String username,String password) {
 
-		login.enterPassword(password);
+		login.enterUsername(username);
 		login.enterPassword(password);
 	}
 
